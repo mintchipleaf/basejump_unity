@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\FollowPlayerY.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
+     <Compile Include="Assets\Scripts\SpriteTile.cs" />
      <None Include="Assets\Shaders\Scroll.shader" />
      <None Include="Assets\Fonts\pixelade\read me.txt" />
   </ItemGroup>

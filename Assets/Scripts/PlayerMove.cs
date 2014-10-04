@@ -3,14 +3,17 @@ using System.Collections;
 
 public class PlayerMove : MonoBehaviour {
 
-	public Vector2 speed = new Vector2(5,1);
+	public float speed = new float();
+	public float boost = new float();
 
 	private Vector2 movement = new Vector2();
 	private Vector2 movementY = new Vector2();
 
+	private Vector2 speedval = new Vector2();
+
 	// Use this for initialization
 	void Start () {
-	
+		speedval.x = speed;
 	}
 	
 	// Update is called once per frame
@@ -20,7 +23,7 @@ public class PlayerMove : MonoBehaviour {
 	
 		if (Input.GetKey ("up") || Input.GetKey("space")){
 			inputY = 1;
-			movement.y = rigidbody2D.velocity.y + 0.1f;
+			movement.y = rigidbody2D.velocity.y + boost;
 		}
 		else {
 			movement.y = rigidbody2D.velocity.y - 0.1f;
@@ -32,8 +35,11 @@ public class PlayerMove : MonoBehaviour {
 			inputX = 1;
 		}
 
-		movement.x = (speed.x * inputX);
+		movement.x = (speedval.x * inputX);
 
+		if (rigidbody2D.velocity.y > -5){ 
+			movement.y = -5; 
+		}
 	}
 
 	void FixedUpdate () {

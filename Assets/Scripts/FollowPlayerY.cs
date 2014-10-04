@@ -3,6 +3,8 @@ using System.Collections;
 
 public class FollowPlayerY : MonoBehaviour {
 	
+	public float offset = new float();
+
 	Transform player;
 	
 	void Start() {
@@ -10,6 +12,6 @@ public class FollowPlayerY : MonoBehaviour {
 	}
 	
 	void Update() {
-		transform.position = new Vector3(transform.position.x, player.position.y, transform.position.z);
+		transform.position = new Vector3(transform.position.x, player.position.y - offset, transform.position.z);
 	}
 }
