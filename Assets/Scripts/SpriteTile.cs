@@ -2,33 +2,42 @@
 using System.Collections;
 
 public class SpriteTile : MonoBehaviour {
+	public Object sprite;		//The sprite prefab to use. Drag a prefab into the inspector
 
-	private float ThisYBound;
-	private float ThisYMin;
-	private float CameraYMax;
-	private float CameraYMin;
+	private float ThisYMin;		//Store bottom of current sprite
+	private float ThisYBound;	//Store half height of current sprite
+	private float CameraYMin;	//Store bottom of camera
+	private float CameraYMax;	//Store top of camera 
 
-	// Use this for initialization
-	void Start () {
-		//Debug.Log(renderer.bounds.min.y);
-		//Debug.Log(renderer.bounds.max.y);
-		Debug.Log("extents y  "+this.renderer.bounds.extents.y);
-		Debug.Log("camera y min  "+Camera.main.ViewportToWorldPoint(new Vector3(0,0)).y);
-		Debug.Log("camera y max  "+Camera.main.ViewportToWorldPoint(new Vector3(1,1)).y);
-	}
+	private bool instantiated;	//Used to store if the next sprite has been instantiated
 	
-	// Update is called once per frame
+	void Start () {
+		instantiated = false;	//Has not yet instantiated next sprite
+		//debug();
+	}
+
 	void Update () {
+		ThisYMin = this.renderer.bounds.min.y;									//Bottom y pos of current sprite
+		ThisYBound = this.renderer.bounds.extents.y;							//Half height of current sprite
+		CameraYMin = Camera.main.ViewportToWorldPoint(new Vector3(-1,-1)).y;	//Bottom y pos of camera
+		CameraYMax = Camera.main.ViewportToWorldPoint(new Vector3(1,1)).y;		//Top y pos of camera
 
-		ThisYMin = this.renderer.bounds.min.y;
-		CameraYMax = Camera.main.ViewportToWorldPoint(new Vector3(1,1)).y;
+		//If the next sprite hasn't been instantiated, and bottom of this one is at or above bottom of screen
+		if(!instantiated && ThisYMin >= CameraYMin){
+			Instantiate(sprite, new Vector3(this.transform.position.x, ThisYMin - (ThisYBound), this.transform.position.z), Quaternion.identity); //Instantiate next sprite ThisYBound units below current y pos
+			instantiated = true;	//Next sprite has been instantiated
+		}
 
-		if (ThisYMin >= CameraYMax){
-			ThisYBound = this.renderer.bounds.extents.y;
-			CameraYMin = Camera.main.ViewportToWorldPoint(new Vector3(0,0)).y;
-
-			this.transform.position = new Vector3(this.transform.position.x, CameraYMin - ThisYBound);
-			//Try ThisY + Bounds.extents(y) >= ViewPortToWorldPoint(camera.main.transform.positon.y + camera's Bounds.extents(t))
+		if(ThisYMin > CameraYMax){
+			Destroy(gameObject);
 		}
 	}
+
+	/*void debug(){		
+		Debug.Log("This y min " +renderer.bounds.min.y);
+		Debug.Log("This y max " + renderer.bounds.max.y);
+		Debug.Log("extents y  "+this.renderer.bounds.extents.y);
+		Debug.Log("camera y min  "+Camera.main.ViewportToWorldPoint(new Vector3(-1,-1)).y);
+		Debug.Log("camera y max  "+Camera.main.ViewportToWorldPoint(new Vector3(1,1)).y);
+	}*/
 }
