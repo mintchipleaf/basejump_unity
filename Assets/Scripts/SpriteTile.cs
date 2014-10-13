@@ -4,15 +4,15 @@ using System.Collections;
 public class SpriteTile : MonoBehaviour {
 	public Object sprite;		//The sprite prefab to use. Drag a prefab into the inspector
 
-	private float ThisYMin;		//Store bottom of current sprite
-	private float ThisYBound;	//Store half height of current sprite
-	private float CameraYMin;	//Store bottom of camera
-	private float CameraYMax;	//Store top of camera 
+	private float ThisYMin;
+	private float ThisYBound;
+	private float CameraYMin;
+	private float CameraYMax;
 
 	private bool instantiated;	//Used to store if the next sprite has been instantiated
 	
 	void Start () {
-		instantiated = false;	//Has not yet instantiated next sprite
+		instantiated = false;
 		//debug();
 	}
 
@@ -29,7 +29,7 @@ public class SpriteTile : MonoBehaviour {
 		}
 
 		if(ThisYMin > CameraYMax){
-			Destroy(gameObject);
+			Destroy(gameObject);	//EMERGENCY DESTRUCTION SYSTEM
 		}
 	}
 
