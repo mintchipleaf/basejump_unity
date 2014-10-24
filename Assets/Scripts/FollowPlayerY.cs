@@ -8,7 +8,7 @@ public class FollowPlayerY : MonoBehaviour {
 	Transform player;
 	
 	void Start() {
-		player = GameObject.Find("player").transform;
+		player = GameObject.Find("Player").transform;
 	}
 	
 	void Update() {
