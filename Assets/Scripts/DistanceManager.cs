@@ -2,10 +2,11 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class ScoreManager : MonoBehaviour {
+public class DistanceManager : MonoBehaviour {
 
 	public GameObject player;
-	public float score;
+	public float distance;
+
 	Text text;
 	float startpos;
 	float playerpos;
@@ -13,7 +14,7 @@ public class ScoreManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		text = GetComponent<Text>();
-		score = 0;
+		distance = 0;
 		startpos = player.transform.position.y;
 	}
 	
@@ -24,7 +25,7 @@ public class ScoreManager : MonoBehaviour {
 			
 		}
 	
-		score = Mathf.Round(startpos - playerpos);
-		text.text = "m\n" + score;	
+		distance = Mathf.Round(startpos - playerpos);
+		text.text = "m\n" + distance;	
 	}
 }

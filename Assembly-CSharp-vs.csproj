@@ -46,10 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\DistanceManager.cs" />
      <Compile Include="Assets\Scripts\FollowPlayerY.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\MeterManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
-     <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\SpeedManager.cs" />
      <Compile Include="Assets\Scripts\SpriteTile.cs" />
      <None Include="Assets\Shaders\Scroll.shader" />

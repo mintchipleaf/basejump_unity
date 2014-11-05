@@ -41,10 +41,11 @@
 -define:ENABLE_PROFILER
 -define:UNITY_EDITOR
 -define:UNITY_EDITOR_OSX
+'Assets/Scripts/DistanceManager.cs'
 'Assets/Scripts/FollowPlayerY.cs'
 'Assets/Scripts/GameManager.cs'
+'Assets/Scripts/MeterManager.cs'
 'Assets/Scripts/PlayerMove.cs'
-'Assets/Scripts/ScoreManager.cs'
 'Assets/Scripts/SpeedManager.cs'
 'Assets/Scripts/SpriteTile.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'

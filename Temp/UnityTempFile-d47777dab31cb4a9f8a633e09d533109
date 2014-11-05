@@ -43,6 +43,7 @@
 -define:UNITY_EDITOR_OSX
 'Assets/Scripts/FollowPlayerY.cs'
 'Assets/Scripts/GameManager.cs'
+'Assets/Scripts/MeterManager.cs'
 'Assets/Scripts/PlayerMove.cs'
 'Assets/Scripts/ScoreManager.cs'
 'Assets/Scripts/SpeedManager.cs'
