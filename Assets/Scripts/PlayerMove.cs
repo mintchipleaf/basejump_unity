@@ -53,7 +53,7 @@ public class PlayerMove : MonoBehaviour {
 	https://www.dropbox.com/s/4dpqe5p6sc68bft/Screenshot%202014-09-24%2021.43.25.png?dl=0
 			rigidbody2D.velocity = movement;
 	}
-	void OnGUI() {
+	/*void OnGUI() {
 		GUI.Label(new Rect(10, 10, 100, 20), movement.y.ToString());
-	}
+	}*/
 }

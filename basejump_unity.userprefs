@@ -1,11 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SpeedManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MeterManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/MeterManager.cs" Line="6" Column="25" />
-      <File FileName="Assets/Scripts/SpeedManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SpeedManager.cs" Line="2" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="16" Column="3" />
       <File FileName="Assets/Scripts/SpriteTile.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MeterManager.cs" Line="17" Column="3" />
+      <File FileName="Assets/Scripts/PlayerMove.cs" Line="22" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

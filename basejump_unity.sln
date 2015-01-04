@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{8F5F437C-28C6-C42B-364C-3784B28B066E}") = "basejump_unity", "Assembly-CSharp.csproj", "{CC0D7F90-8BDE-2F48-EE43-E5D5F4AA83F8}"
 EndProject
+Project("{8F5F437C-28C6-C42B-364C-3784B28B066E}") = "basejump_unity", "Assembly-CSharp-Editor.csproj", "{D8FD21D9-C80C-4762-2AC6-422ACEEC5B79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +15,15 @@ Global
 		{CC0D7F90-8BDE-2F48-EE43-E5D5F4AA83F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC0D7F90-8BDE-2F48-EE43-E5D5F4AA83F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC0D7F90-8BDE-2F48-EE43-E5D5F4AA83F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8FD21D9-C80C-4762-2AC6-422ACEEC5B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8FD21D9-C80C-4762-2AC6-422ACEEC5B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8FD21D9-C80C-4762-2AC6-422ACEEC5B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8FD21D9-C80C-4762-2AC6-422ACEEC5B79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																														GlobalSection(MonoDevelopProperties) = preSolution
+																																		GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

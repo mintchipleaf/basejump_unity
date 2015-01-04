@@ -48,5 +48,6 @@
 'Assets/Scripts/PlayerMove.cs'
 'Assets/Scripts/SpeedManager.cs'
 'Assets/Scripts/SpriteTile.cs'
+'Assets/uGUITools.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'
