@@ -9,7 +9,7 @@ public class SpeedManager : MonoBehaviour {
 	Text text;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		text = GetComponent<Text>();
 		speed = 40;
 	}

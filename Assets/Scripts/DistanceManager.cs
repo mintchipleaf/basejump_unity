@@ -12,7 +12,7 @@ public class DistanceManager : MonoBehaviour {
 	float playerpos;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		text = GetComponent<Text>();
 		distance = 0;
 		startpos = player.transform.position.y;

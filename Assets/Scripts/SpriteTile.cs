@@ -11,7 +11,7 @@ public class SpriteTile : MonoBehaviour {
 
 	private bool instantiated;	//Used to store if the next sprite has been instantiated
 	
-	void Start () {
+	void Awake () {
 		instantiated = false;
 		//debug();
 	}

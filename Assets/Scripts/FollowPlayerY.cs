@@ -7,7 +7,7 @@ public class FollowPlayerY : MonoBehaviour {
 
 	Transform player;
 	
-	void Start() {
+	void Awake() {
 		player = GameObject.Find("Player").transform;
 	}
 	
