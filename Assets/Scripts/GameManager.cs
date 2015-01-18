@@ -1,23 +1,23 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 
-	bool makeObstacle;
+
 
 	// Use this for initialization
 	void Awake () {
-		makeObstacle = false;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		camera.backgroundColor = Color.black;
-
-		
+		Camera.main.backgroundColor = Color.black;
 	}
 
-	void OnGui () {
-
-	}
+	/// <summary>
+	/// Pizzas the butts.
+	/// </summary>
+	void PizzaButts(){}
 }
